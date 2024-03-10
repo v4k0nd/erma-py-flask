@@ -61,6 +61,7 @@
   flex-wrap: wrap;
   /* align-content: flex-start; */
   align-items: baseline;
+  /* opacity: 0; */
 }
 
 .product-catalog {

@@ -48,6 +48,9 @@
   --accent-color: rgba(129, 177, 0, 1);
 }
 
+body, html {
+  overscroll-behavior-y: none;
+}
 
 html {
   font-size: 1.2rem;
