@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Twemoji Country Flags";
+  unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067,
+    U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+  src: url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1/dist/TwemojiCountryFlags.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Blanco;
+  src: url(/static/fonts/BlancoSubset-Regular.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: Blanco;
+  src: url(/static/fonts/BlancoSubset-Regular.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: Blanco;
+  src: url(/static/fonts/BlancoSubset-Bold.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 700
+}
+
+@font-face {
+  font-family: Blanco;
+  src: url(/static/fonts/BlancoSubset-Italic.woff2) format("woff2");
+  font-display: swap;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Blanco;
+  src: url(/static/fonts/BlancoSubset-BoldItalic.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic
+}
+
+:root {
+  --accent-color: rgba(129, 177, 0, 1);
+}
+
+
+html {
+  font-size: 1.2rem;
+  --maxWidth: 1600px;
+  --gap: 2rem;
+  scrollbar-color: #666 #201c29;
+  color: #fff;
+  overflow-x: hidden;
+  background: rgb(129, 177, 0);
+  background: linear-gradient(90deg, rgba(129, 177, 0, 1) 43%, rgba(60, 87, 0, 1) 100%);
+  --bg-blend-mode: overlay;
+  background-color: #262626;
+  background-position: top center center;
+}
+
+body {
+  background: 0 0;
+  padding-block: 0.5rem;
+  font-family:
+    'Blanco', 'system-ui', '-apple-system', 'BlinkMacSystemFont',
+    'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.vl {
+  border-right: 2px solid rgb(0, 0, 0);
+  size: 1rem;
+}
+
+.language-switcher ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-switcher li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Twemoji Country Flags", serif
+}
+
+
+
+@media (max-width: 1000px) {
+  html {
+    --gap: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    --gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+#top-of-site-pixel-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 500px;
+  left: 0;
+}
+
+.header2 {
+  font-family: 'MD Primer Bold', 'Rubik', 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', 'Tahoma', 'Sans-Serif';
+}
+
+/* Add a class for all nav items for common properties */
+.site-header .main-nav>ul>li.nav-item {
+  display: flex;
+  align-items: center;
+  /* Centers items vertically */
+  justify-content: center;
+  /* Centers items horizontally */
+}
+
+/* Style the dropdown container for consistent appearance */
+.site-header .main-nav>ul>li.dropdown {
+  display: flex;
+  align-items: center;
+  /* This ensures vertical centering */
+  justify-content: center;
+  /* This ensures horizontal centering */
+}
+
+/* Style the select element directly to match other nav items */
+.site-header .main-nav>ul>li.dropdown>.language-switcher>select {
+  font-family: "Twemoji Country Flags", 'MD Primer Bold', 'Rubik', 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', 'Tahoma', 'Sans-Serif';
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  /* color: rgb(0, 0, 0); */
+  /* padding: 1.2rem 1rem; */
+  /* Adjust padding to match other items */
+  border: none;
+  /* Remove border for a cleaner look, or style as needed */
+  background-color: transparent;
+  /* Match background with nav's background */
+  cursor: pointer;
+  /* Change cursor to indicate this is a dropdown */
+}
+
+
+
+.site-header .main-nav>ul {
+  display: flex;
+  height: 100%;
+  list-style-type: none;
+}
+
+.site-header .main-nav>ul>li>a {
+  font-family: 'MD Primer Bold', 'Rubik', 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', 'Tahoma', 'Sans-Serif';
+  /* font-family: Book Antiqua; */
+  font-style: normal;
+  /* font-weight: 700; */
+  text-transform: uppercase;
+  /* font-weight: 500; */
+  font-size: 1.1rem;
+  /* height: 100%; */
+  color: rgb(0, 0, 0);
+  padding: 1.2rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+}
+
+.site-header .main-nav>ul>li>a:focus,
+.site-header .main-nav>ul>li>a:hover {
+  color: #89c000;
+  /* background: hsla(0, 0%, 100%, 0.1); */
+  /* opacity: 1; */
+}
+
+@media (max-width: 1000px) {
+  /* .site-header {
+      padding: 20px 20px 0;
+      flex-wrap: wrap;
+    } */
+
+  /* .site-header .header-middle-area {
+      flex: 0 0 auto;
+    } */
+
+  .site-header .main-nav {
+    padding-top: 10px;
+    -webkit-margin-start: -10px;
+    margin-inline-start: -10px;
+  }
+
+  .site-header .main-nav>ul>li>a {
+    padding: 0.6rem 0.8rem;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  /* .site-header .icon-logo-star {
+      width: 18px;
+      height: 18px;
+    }
+    .site-header .icon-logo-text {
+      height: 15px;
+      width: 116px;
+    } */
+}
+
+/* @media (max-width: 800px) {
+    .main-nav > ul {
+      flex-wrap: wrap;
+      flex-basis: 1em;
+    }
+  } */
+
+@media (max-width: 680px) {
+  .site-header {
+    padding-top: 15px;
+  }
+
+  .site-header .main-nav {
+    width: calc(100% + var(--gap) * 2);
+    overflow: auto;
+  }
+}
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: 0 var(--gap);
+  margin: 0 0 var(--gap);
+  background-color: rgb(255, 255, 255);
+  /* border-bottom: 1px solid #676767; */
+}
+
+.site-header .logo {
+  transition: 0s;
+  flex: 0;
+  position: relative;
+  align-self: stretch;
+}
+
+.site-header .logo,
+.site-header .logo>a {
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 1000px) {
+  .logo {
+    /* width: 100px; */
+    /* max-width: 100%; */
+    height: auto;
+  }
+}
+
+.container {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  padding-top: 100%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #000;
+  overflow-wrap: break-word;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+}
+
+.page-content-index {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #000;
+  overflow-wrap: break-word;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .page-content > ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-basis: 33%;
+    list-style-type: none;
+  } */
+
+.list-bulletless {
+  list-style-position: inside;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.no-pad-left {
+  padding-left: 0;
+}
+
+.sidebar>li {
+  padding-top: 1rem;
+}
+
+@media (max-width: 680px) {
+  .page-content {
+    flex-direction: column;
+  }
+
+  .site-header .main-nav>ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header .main-nav>ul>li>a {
+    padding: 0.45rem;
+  }
+}
+
+ul.separator>li {
+  padding: 0.5em 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+ul.separator>li:last-child {
+  border-bottom: 0;
+}
+
+a {
+  color: var(--accent-color)
+}
+
+/* a:link {
+    color: blue;
+  }
+  
+  a:visited {
+    color: purple;
+  }
+  
+  a:focus,
+  a:hover {
+    border-bottom: 1px solid;
+  }
+  
+  a:active {
+    color: red;
+  } */

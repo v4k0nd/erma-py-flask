@@ -1,0 +1,23 @@
+{
+    "lang": "",
+    "tab_title": "",
+    "description": "",
+    "header": {
+        "home": "",
+        "about": "",
+        "gallery": "",
+        "contact": ""
+    },
+    "catalog_types": {
+        "balcon": "",
+        "gradina": "",
+        "seminte": "",
+        "crizanteme": "",
+        "radacini": "",
+        "poinsettia": ""
+    },
+    "contact": {
+        "phone_number": "",
+        "address": ""
+    }
+}

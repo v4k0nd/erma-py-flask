@@ -1,0 +1,23 @@
+{
+    "lang": "ro",
+    "tab_title": "Erma Flori | ",
+    "description": "Aici se afla cataloage sezonale!",
+    "header": {
+        "home": "Home",
+        "about": "Despre Noi",
+        "gallery": "Galerie",
+        "contact": "Contact"
+    },
+    "catalog_types": {
+        "balcon": "Butași mușcate și flori de balcon",
+        "gradina": "Semințe, răsaduri și butași flori anuale / bienale / perene",
+        "seminte": "Semințe",
+        "crizanteme": "Butași crizanteme",
+        "radacini": "Rădăcini plante perene",
+        "poinsettia": "Poinsettias for the Holidays"
+    },
+    "contact": {
+        "phone_number": "NUMERE DE TELEFON",
+        "address": "ADRESA"
+    }
+}

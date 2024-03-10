@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/favicon.svg') }}" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}" />
+
+    {% assets "css_all" %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/packed/packed.css') }}">
+    {% endassets %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Cataloage sezonale" />
+
+    {#
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/catalog-setup.css') }}" /> #}
+
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="{% block og_url %}{% endblock %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ self.title() }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/favicon.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="erma.ro" />
+    <meta property="twitter:url" content="{{ self.og_url() }}" />
+    <meta name="twitter:title" content="{{ self.title() }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/favicon.png', _external=True) }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo-xml.svg') }}" width="160" alt="ERMA logo" />
+        </div>
+        <div class="header-middle-area">
+            <nav class="main-nav">
+                <ul>
+                    <li class="home">
+                        <a href="/{{ lang }}/">
+                            <span>{{ header['home'] }}</span>
+                        </a>
+                    </li>
+                    <li class="about-us">
+                        <a href="/{{ lang }}/about">
+                            <span>{{ header['about'] }}</span>
+                        </a>
+                    </li>
+                    {# <li class="gallery">
+                        <a href="/{{ lang }}/gallery">
+                            <span>{{ header['gallery'] }}</span>
+                        </a>
+                    </li> #}
+                    <li class="contact">
+                        <a href="/{{ lang }}/contact">
+                            <span>{{ header['contact'] }}</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <div class="language-switcher">
+                            {# <label class="language-switcher"> #}
+                                <select onchange="switchLanguage(this.value)">
+                                    <option value="ro" {{ 'selected' if lang=='ro' else '' }}>
+                                        RO 🇷🇴
+                                    </option>
+                                    <option value="hu" {{ 'selected' if lang=='hu' else '' }}>
+                                        HU 🇭🇺
+                                    </option>
+                                </select>
+                                {# </label> #}
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="page-content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <footer>
+    </footer>
+
+    <!--<script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    <script>
+        function switchLanguage(newLang) {
+
+            var currentPath = window.location.pathname;
+
+            // Regular expression to match the current language code at the start of the path
+            // and optionally any following path segments.
+            var langRegex = /^\/(ro|hu)(\/|$)/;
+
+            // Use the regex to test if the current path starts with a language code
+            if (langRegex.test(currentPath)) {
+                var newPath = currentPath.replace(langRegex, `/${newLang}$2`);
+            } else {
+                var newPath = `/${newLang}${currentPath}`;
+            }
+
+            window.location.href = newPath;
+        }
+    </script>
+</body>
+
+</html>

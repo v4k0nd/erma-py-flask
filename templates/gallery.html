@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+{% block title %} {{ tab_title + header.gallery }} {% endblock title %}
+{% block content %}
+<div class="page-content">
+    <main>
+        <div class="gallery">
+            {% for image_url in images %}
+            {# <img src="{{ url_for('static', filename=image) }}" alt="Gallery image"> #}
+            <img src="{{ image_url }}" alt="{{ gallery_image_alt }}" style="width:100%">
+            {% endfor %}
+        </div>
+    </main>
+</div>
+{% endblock %}

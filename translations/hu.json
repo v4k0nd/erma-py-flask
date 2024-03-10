@@ -1,0 +1,23 @@
+{
+    "lang": "hu",
+    "tab_title": "Erma Virág | ",
+    "description": "Itt található a szezonális katalógusaink!",
+    "header": {
+        "home": "Kezdőlap",
+        "about": "Rólunk",
+        "gallery": "Galéria",
+        "contact": "Kapcsolat"
+    },
+    "catalog_types": {
+        "balcon": "Muskátli és erkélyvirágok",
+        "gradina": "Magok, palánták és évelő/kétnyári virágok",
+        "seminte": "Virág magok",
+        "crizanteme": "Krizantém dugványok",
+        "radacini": "Évelő virág gyökerek",
+        "poinsettia": "Poinsettia az ünnepekre"
+    },
+    "contact": {
+        "phone_number": "TELEFONSZÁM",
+        "address": "CÍM"
+    }
+}

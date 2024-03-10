@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+flask-cors
+mysql-connector-python
+python-dotenv
+Flask-Assets
+cssmin
